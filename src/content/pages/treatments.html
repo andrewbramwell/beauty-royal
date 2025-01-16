@@ -1,0 +1,21 @@
+---
+title: 'Treatments | Beauty Royal House'
+description: "Discover our range of professional beauty treatments including waxing, skincare and nail care. Expert services in a private Ross-on-Wye home salon setting."
+permalink: 'treatments/'
+eleventyNavigation:
+    key: Treatments
+    order: 300
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/massages.css">
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpg" | resize({width: 2560, height: 1136}) | avif %}">
+{% endblock %}
+
+{% block body %}
+
+{% include 'components/pricing-sbs.html' %}                                                  
+
+{% endblock %}

@@ -1,18 +1,14 @@
 /*-- -------------------------- -->
-<---          Hero 856          -->
+<---           Hero             -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #hero-856 {
-        /* centers button */
-        text-align: center;
-        /* 116px - 164px top */
-        /* 60px - 100px  bottom */
-        padding: clamp(7.25rem, 16.82vw, 10.25rem) (16/16rem)
-            clamp(3.75rem, 7.82vw, 6.25rem);
-        background-color: #f7f7f7;
-        /* clips the svg wave from overflowing */
+    #hero-1623 {
+        /* 200px - 300px - top leaving extra space for the navigation */
+        /* 160px - 240px bottom */
+        padding: clamp(12.5rem, 25.95vw, 18.75em) (16/16rem) clamp(10rem, 15vw, 15rem);
+        /* prevents the topper line from causing an overflow */
         overflow: hidden;
         position: relative;
         z-index: 1;
@@ -22,553 +18,189 @@
             max-width: (1280/16rem);
             margin: auto;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             gap: (48/16rem);
         }
 
         .cs-content {
-            max-width: (630/16rem);
+            --cornerWidth: 8.75rem;
+            --cornerHeight: 8.75rem;
+
+            width: 100%;
+            max-width: (850/16rem);
+            /* 48px - 80px top & bottom */
+            /* 16px - 48px left & right */
+            padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 5vw, 3rem);
+            /* prevents padding from affecting height and width */
+            box-sizing: border-box;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .cs-topper {
-            font-size: (16/16rem);
-            line-height: 1.2em;
-            text-transform: uppercase;
-            text-align: inherit;
-            letter-spacing: 0.1em;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: (4/16rem);
-            display: block;
-        }
-
-        .cs-title {
-            /* 39px - 61px */
-            font-size: clamp(2.4375rem, 5vw, 3.8125rem);
-            font-weight: 900;
-            line-height: 1.2em;
-            text-align: center;
-            /* 23 characters including spaces wide */
-            max-width: 23ch;
-            margin: 0 0 (16/16rem) 0;
-            color: var(--headerColor);
-            position: relative;
-        }
-
-        .cs-text {
-            /* 16px - 20px */
-            font-size: clamp(1rem, 1.5vw, 1.25rem);
-            line-height: 1.5em;
-            text-align: center;
-            width: 100%;
-            max-width: (531/16rem);
-            /* 28px - 40px */
-            margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
-            color: var(--bodyTextColor);
-        }
-
-        .cs-picture {
-            width: 100%;
-            max-width: (570/16rem);
-            /* 400px - 712px */
-            height: clamp(25rem, 95vw, 44.5rem);
-            /* 100px - 200px */
-            border-radius: 0 clamp(6.25rem, 17vw, 12.5rem) 0
-                clamp(6.25rem, 17vw, 12.5rem);
-            box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.16);
-            /* clips the img tag corners */
-            overflow: hidden;
-            display: block;
-            position: relative;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                /* makes image act as a background image */
-                object-fit: cover;
-                /* ensures the top of the images is at the top of the container, no heads getting cut off */
-                object-position: top;
-            }
-        }
-
-        .cs-wave {
-            /* we're stretching the svg wider than the viewport so it's taller and has more of a presence */
-            width: 320%;
-            height: auto;
-            display: block;
-            position: absolute;
-            left: 50%;
-            bottom: -1px;
-            transform: translateX(-50%);
-            z-index: -1;
-        }
-    }
-}
-
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #hero-856 {
-        text-align: left;
-        .cs-container {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .cs-content {
-            width: 40vw;
-            /* prevents flex-box from squishing it */
-            flex: none;
-            align-items: flex-start;
-            /* sends it to the right in the 2nd position */
-            order: 2;
-        }
-
-        .cs-title,
-        .cs-text {
-            text-align: left;
-        }
-
-        .cs-picture {
-            /* 623px - 814px */
-            height: clamp(38.9375rem, 60vw, 50.875rem);
-        }
-
-        .cs-wave {
-            width: 100%;
-            left: 0;
-            /* flips it horizontally */
-            transform: scaleX(-1);
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #hero-856 {
-            background-color: rgba(0, 0, 0, 0.2);
-            .cs-title,
-            .cs-text,
-            .cs-number,
-            .cs-desc {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-wave {
-                path {
-                    fill: var(--dark);
-                }
-            }
-        }
-    }
-}
-                                
-
-/*-- -------------------------- -->
-<---         Hero 1469          -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #hero-1469 {
-	    /* 200px - 288px - leaving extra space for the navigation */
-        padding: clamp(12.5rem, 29.95vw, 18rem) (16/16rem) 0;
-        /* 100px - 288px */
-        padding-bottom: clamp(6.25rem, 20vw, 18rem);
-        box-sizing: border-box;
-        overflow: hidden;
-        position: relative;
-        z-index: 1;
-
-        &:before {
-            content: '';
-            width: 100%;
-            height: 100%;
-            background: #FFF3EC;
-            opacity: .9;
-            position: absolute;
-            display: block;
-            top: 0;
-            left: 0;
-        }
-
-        .cs-container {
-            width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
-            display: flex;
-            justify-content: center;
             flex-direction: column;
             align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
             position: relative;
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
-            width: 100%;
-            max-width: (616/16rem);
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
-        }
-
-        .cs-topper {
-            /* 13px - 16px */
-            font-size: clamp(.8125rem, 1.6vw, 1rem);
-            line-height: 1.2em;
-            text-transform: uppercase;
-            text-align: inherit;
-            letter-spacing: .1em;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: (8/16rem);
-            display: block;
-        }
-
-        .cs-title {
-            /* 39px - 61px */
-            font-size: clamp(2.4375rem, 6.40vw, 3.8125rem);
-            font-weight: 700;
-            line-height: 1.2em;
-            text-align: inherit;
-            max-width: 20ch;
-            margin: 0 0 (16/16rem) 0;
-            color: var(--headerColor);
-            position: relative;
-        }
-
-        .cs-text {
-            /* 16px - 24px */
-            font-size: clamp(1rem, 2.3vw, 1.25rem);
-            line-height: 1.5em;
-            text-align: inherit;
-            width: 100%;
-            /* 32px - 40px */
-            margin: 0 0 clamp(2rem, 4vw, 2.5rem) 0;
-            color: var(--bodyTextColor);
-        }
-
-        .cs-background {
-            width: 100%;
-            height: 100%;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -2;
-            
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                /* makes the top of the image start at the top of the parent */
-                object-position: top;
-            }
-        }
-        
-        .cs-hide {
-            display: none;
-        }
-
-        .cs-curve {
-            width: 100%;
-            height: auto;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-        }
-    }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #hero-1469 {
-        &:before {
-            background: linear-gradient(89deg, rgba(255, 243, 236, 0.90) 44.46%, rgba(255, 243, 236, 0.00) 78.47%);
-            opacity: 1;
-        }
-        .cs-container {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .cs-content {
-            width: 67%;
-            text-align: left;
-            align-items: flex-start;
-        }
-
-        .cs-hide {
-            display: block;
-            position: absolute;
-            z-index: 10;
-        }
-    }
-}
-
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #hero-1469 {
-        .cs-flower {
-            display: block;
-            left: (-56/16rem);
-            /* 150px - 280px */
-            top: clamp(9.375rem, 10vw, 17.5rem);
-        }
-    }
-}
-
-/* Large Desktop Parallax Effect - 1600px */
-@media only screen and (min-width: 100rem) {
-    #hero-1469 {
-        .cs-background {
-            background: url("/assets/images/hero.jpg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-
-            img {
-                display: none;
-            }
-        }
-    }
-}
-    
-
-/* Dark Mode - 360px */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #hero-1469 {
-            &:before {
-                background-color: var(--dark);
-                opacity: .94;
-            }
-
-            .cs-title, .cs-text {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-text {
-                opacity: .8;
-            }
-
-            .cs-curve {
-                path {
-                    fill: var(--dark);
-                }
-            }
-        }
-    }
-}
-
-/* Dark Mode - 768px */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #hero-1469 {
-            background-color: var(--dark);
-            &:before {
-                background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 15%,rgba(0,0,0,1) 23%,rgba(0,0,0,0) 100%);
-                opacity: .8;
-            }
-
-            .cs-background {
-                opacity: .2;
-            }
-        }
-    }
-}
-
-
-/*-- -------------------------- -->
-<---         Hero 1950          -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #hero-1950 {
-        min-height: 100dvh;
-        /* 200px - 300px top */
-        /* 60px - 100px bottom */
-        padding: clamp(12.5rem, 12vw, 18.75rem) (16/16rem) clamp(3.75rem, 8vw, 6.25rem) (16/16rem);
-        display: flex;
-        align-items: flex-end;
-        position: relative;
-        z-index: 1;
-
-        .cs-container {
-            width: 100%;
-            max-width: (1369/16rem);
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: flex-end;
-            /* 60px - 180px */
-            gap: clamp(3.75rem, 13vw, 11.25rem);
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: left;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: flex-start;
-        }
-
-        .cs-title {
-            /* 39px - 61px */
-            font-size: clamp(2.4375rem, 5vw, 3.8125rem);
-            margin-bottom: (28/16rem);
-            color: #fff;
-        }
-
-        .cs-text {
-            /* 16px - 20px */
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            margin-bottom: (20/16rem);
-            color: #fff;
-            opacity: 0.8;
-        }
-
-        .cs-flex-group {
-            max-width: (480/16rem);
-        }
-
-        .cs-background {
-            width: 100%;
-            height: 100%;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -2;
+            z-index: 1;
 
             &:before {
-                /* Overlay */
+                /* top left corner */
                 content: '';
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(180deg, rgba(26, 26, 26, 0.86) 10.79%, rgba(26, 26, 26, 0.00) 48.32%, rgba(26, 26, 26, 0.86) 82.84%);
-                /* prevents the cursor from interacting with it */
-                pointer-events: none;
+                width: 35vw;
+                max-width: var(--cornerWidth);
+                height: 35vw;
+                max-height: var(--cornerHeight);
+                border: 2px solid #fff;
+                border-radius: 1rem 0 0 0;
+                border-right: none;
+                border-bottom: none;
+                opacity: 1;
+                position: absolute;
                 display: block;
-                position: absolute;
                 top: 0;
                 left: 0;
-                z-index: 1;
+                z-index: -1;
             }
-            
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-        }
-    }
-}
 
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #hero-1950 {
-        .cs-content {
-            text-align: left;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: flex-start;
-            gap: (32/16rem);
+            &:after {
+                /* top right corner */
+                content: '';
+                width: 35vw;
+                max-width: var(--cornerWidth);
+                height: 35vw;
+                max-height: var(--cornerHeight);
+                border: 2px solid #fff;
+                border-radius: 0 1rem 0 0;
+                border-left: none;
+                border-bottom: none;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 0;
+                right: 0;
+                z-index: -1;
+            }
         }
+
+        .cs-corners {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            &:before {
+                /* bottom left corner */
+                content: '';
+                width: 35vw;
+                max-width: var(--cornerWidth);
+                height: 35vw;
+                max-height: var(--cornerHeight);
+                border: 2px solid #fff;
+                border-radius:  0 0 0 1rem;
+                border-right: none;
+                border-top: none;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+            }
+
+            &:after {
+                /* bottom right corner */
+                content: '';
+                width: 35vw;
+                max-width: var(--cornerWidth);
+                height: 35vw;
+                max-height: var(--cornerHeight);
+                border: 2px solid #fff;
+                border-radius:  0 0 1rem 0;
+                border-left: none;
+                border-top: none;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
+            }
+        }
+
 
         .cs-title {
-            width: 55%;
-            max-width: (630/16rem);
-            margin-bottom: 0;
-            /* prevents flexbox from squishing it */
-            flex: none;
+            /* 39px - 61px */
+            font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            text-align: center;
+            max-width: (829/16rem);
+            /* 16px - 24px */
+            margin: 0 0 (40/16rem) 0;
+            color: #fff;
+            position: relative;
         }
 
-        .cs-flex-group {
-            max-width: (480/16rem);
+        .cs-text {
+            /* 16px - 20px */
+            font-size: clamp(1rem, 1.95vw, 1.25rem);
+            line-height: 1.5em;
+            text-align: center;
+            width: 100%;
+            /* 464px - 622px */
+            max-width: clamp(29rem, 60vw, 38.785rem);
+            margin: 0 auto 0;
+            margin-bottom: (32/16rem);
+            color: #fff;
         }
-    }
-}
 
-/* Large Desktop Parallax Effect - 100px */
-@media only screen and (min-width: 100rem) {
-    #hero-1950 {
-        .cs-background {
-            background: url("/assets/images/hero.jpg");
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            /* creates the parallax effect */
-            background-attachment: fixed;
-
-            img {
-                display: none;
-            }
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #hero-1950 {
-            background-color: rgba(0, 0, 0, 0.6);
-
-            .cs-text {
-                opacity: 0.8;
-            }
-
-            .cs-background {
-                background-color: #000;
-                opacity: .5;
-
-                img {
-                    opacity: 1;
+        .cs-button-solid {
+            z-index: 1;
+            position: relative;
+            display: inline-block;
+            border-radius: 3.75rem;
+            background-color: var(--secondary);
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            width: auto;
+            padding: 0 3rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: var(--headerFontFamily);
+            font-size: 1rem;
+            line-height: 3.125em;
+            font-weight: bold;
+            color: var(--bodyTextColorWhite);
+            transition: background-color 0.3s, color 0.3s;
+            text-align: center;
+            font-family: oswald;
+            text-transform: uppercase;
+        
+            &:hover {
+                color: #fff;
+                background-color: var(--secondary);
+                color: var(--secondary);
+        
+                &:before {
+                    transform: scale(1);
                 }
             }
+        
+            &:before {
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                opacity: 1;
+                display: block;
+                border-radius: 3.75rem;
+                background-color: #fff;
+                width: 100%;
+                height: 100%;
+                transform: scale(0);
+                transition: transform 0.3s;
+            }
         }
-    }
-}
-
-/*-- -------------------------- -->
-<---         Hero 1059          -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #hero-1059 {
-        /* Centers button */
-        text-align: left;
-        /* 200px - 300px - leaving extra space for the navigation */
-        padding: clamp(12.5rem, 31.95vw, 18.75rem) (16/16rem) 0;
-        /* 130px - 200px */
-        padding-bottom: clamp(8.125rem, 16.5vw, 12.5rem);
-        position: relative;
-        z-index: 1;
 
         .cs-background {
             width: 100%;
@@ -584,8 +216,8 @@
                 content: "";
                 width: 100%;
                 height: 100%;
-                background: #1a1a1a;
-                opacity: 0.84;
+                background: #230908;
+                opacity: 0.8;
                 position: absolute;
                 display: block;
                 top: 0;
@@ -602,76 +234,406 @@
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
-                /* makes the top of the image start at the top of the parent */
-                object-position: top;
             }
-        }
-
-        .cs-container {
-            width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
-            width: 100%;
-            max-width: (630/16rem);
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
-        }
-
-        .cs-title {
-            /* 39px - 61px */
-            font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
-            font-weight: 700;
-            line-height: 1.2em;
-            text-align: inherit;
-            max-width: (829/16rem);
-            margin: 0 auto (16/16rem) 0;
-            color: #fff;
-            position: relative;
-        }
-
-        .cs-text {
-            /* 16px - 20px */
-            font-size: clamp(1rem, 1.95vw, 1.25rem);
-            line-height: 1.5em;
-            text-align: inherit;
-            width: 100%;
-            /* 464px - 622px */
-            max-width: clamp(29rem, 60vw, 38.785rem);
-            margin: 0 0 (40/16rem) 0;
-            color: #fff;
         }
     }
 }
 
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #hero-1059 {
-        .cs-content {
-            text-align: left;
-            align-items: flex-start;
-        }
-
+/* Large Desktop - Parallax Effect - 1600px */
+@media only screen and (min-width: 100rem) {
+    #hero-1623 {
+        background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-2.jpeg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+        background-attachment: fixed;
         .cs-background {
-            &:before {
-                background: linear-gradient(
-                    to right,
-                    rgba(0, 0, 0, 0.94) 0%,
-                    rgba(0, 0, 0, 0.94) 2%,
-                    rgba(0, 0, 0, 0) 100%
-                );
-                opacity: 1;
+            img {
+                display: none;
             }
         }
     }
 }
 
-                                
-                                
-                                
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #hero-1623 {
+            .cs-background {
+                &:before {
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+@media only screen and (min-width: 0rem) {
+    #services-367 {
+        padding: var(--sectionPadding);
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: -6.25rem;
+        position: relative;
+        z-index: 100;
+    }
+
+    @keyframes floatAnimation2 {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-4px);
+        }
+
+        70% {
+            transform: translateY(4px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes InAndOut {
+        0% {
+            transform: translateY(3.75rem) scale(1);
+            opacity: 1;
+        }
+
+        30% {
+            transform: translateY(1.875rem) scale(0.8);
+            opacity: 1;
+        }
+
+        60% {
+            transform: translateY(0.625rem) scale(0.5);
+            opacity: 0.2;
+        }
+
+        100% {
+            transform: translateY(0rem) scale(0.2);
+            opacity: 0;
+        }
+    }
+
+    @keyframes InAndOut2 {
+        0% {
+            transform: translateY(4.375rem) scale(1);
+            opacity: 1;
+        }
+
+        30% {
+            transform: translateY(2.5rem) scale(0.8);
+            opacity: 1;
+        }
+
+        60% {
+            transform: translateY(1.25rem) scale(0.6);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(0rem) scale(0.4);
+            opacity: 0;
+        }
+    }
+
+    #services-367 .cs-container {
+        width: 100%;
+        max-width: 59rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+
+    #services-367 .cs-content {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #services-367 .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: clamp(1rem, 2vw, 1.25rem);
+    }
+
+    #services-367 .cs-item {
+        list-style: none;
+        width: 100%;
+        max-width: 31.25rem;
+        padding: clamp(1.25rem, 3.5vw, 2.5rem) clamp(1rem, 2.5vw, 2rem);
+        border-radius: 1rem;
+        background-color: #fff;
+        border: 1px solid #e8e8e8;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+        transition: background-color 0.3s;
+    }
+
+    #services-367 .cs-item:before {
+        content: '';
+        background: transparent;
+        border: 2px solid var(--secondary);
+        border-radius: 1rem;
+        opacity: 0;
+        position: absolute;
+        display: block;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+
+    #services-367 .cs-item:hover {
+        background-color: var(--primary);
+    }
+
+    #services-367 .cs-item:hover:before {
+        opacity: 1;
+    }
+
+    #services-367 .cs-item:hover .cs-icon-wrapper:before, #services-367 .cs-item:hover .cs-bubble:before, #services-367 .cs-item:hover .cs-icon-wrapper:after, #services-367 .cs-item:hover .cs-bubble:after {
+        background-color: #914b49;
+    }
+
+    #services-367 .cs-item:hover .cs-default {
+        display: none;
+    }
+
+    #services-367 .cs-item:hover .cs-hover {
+        display: block;
+    }
+
+    #services-367 .cs-item:hover .cs-h3 {
+        color: #fff;
+    }
+
+    #services-367 .cs-item:hover .cs-item-text {
+        color: #fff;
+    }
+
+    #services-367 .cs-link {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #services-367 .cs-icon-wrapper {
+        width: 6.125rem;
+        height: 7.5rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    #services-367 .cs-icon-wrapper:before {
+        content: "";
+        width: 1.6875rem;
+        height: 1.6875rem;
+        border-radius: 50%;
+        background: #e3d2d1;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0.1875rem;
+        animation-name: InAndOut;
+        animation-duration: 1.6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transition: background-color 0.3s;
+    }
+
+    #services-367 .cs-icon-wrapper:after {
+        content: "";
+        width: 1.6875rem;
+        height: 1.6875rem;
+        border-radius: 50%;
+        background: #e3d2d1;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: 0.6875rem;
+        right: 0.3125rem;
+        animation-name: InAndOut2;
+        animation-duration: 2s;
+        animation-delay: 0.3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transition: background-color 0.3s;
+    }
+
+    #services-367 .cs-bubble {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    #services-367 .cs-bubble:before {
+        content: "";
+        width: 3.9375rem;
+        height: 3.9375rem;
+        border-radius: 50%;
+        background: #e3d2d1;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        bottom: 0.25rem;
+        left: 0rem;
+        animation-name: floatAnimation2;
+        animation-duration: 12s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        transition: background-color 0.3s;
+    }
+
+    #services-367 .cs-bubble:after {
+        content: "";
+        width: 3.125rem;
+        height: 3.125rem;
+        border-radius: 50%;
+        background: #e3d2d1;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        bottom: -0.25rem;
+        right: 0rem;
+        animation-name: floatAnimation2;
+        animation-duration: 10s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        transition: background-color 0.3s;
+    }
+
+    #services-367 .cs-icon {
+        width: 4.5rem;
+        height: auto;
+        position: relative;
+        z-index: 10;
+    }
+
+    #services-367 .cs-hover {
+        display: none;
+    }
+
+    #services-367 .cs-h3 {
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        font-weight: 900;
+        text-align: center;
+        line-height: 1.2em;
+        margin: 0;
+        margin-bottom: 0.75rem;
+        color: var(--headerColor);
+        transition: color 0.3s;
+    }
+
+    #services-367 .cs-item-text {
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        text-align: center;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+        transition: color 0.3s;
+    }
+}
+
+@media only screen and (min-width: 48rem) {
+    #services-367 .cs-card-group {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #services-367 .cs-item {
+        width: 48%;
+    }
+}
+
+@media only screen and (min-width: 75rem) {
+    #services-367 {
+        margin-top: -9.375rem;
+    }
+
+    #services-367 .cs-container {
+        max-width: 90rem;
+    }
+
+    #services-367 .cs-card-group {
+        align-items: stretch;
+    }
+
+    #services-367 .cs-item {
+        width: clamp(23.47%, 23vw, 23.955%);
+    }
+}
+
+@media only screen and (min-width: 0rem) {
+    body.dark-mode #services-367 .cs-topper {
+        color: var(--primaryLight);
+    }
+
+    body.dark-mode #services-367 .cs-title, body.dark-mode #services-367 .cs-text, body.dark-mode #services-367 .cs-h3, body.dark-mode #services-367 .cs-item-text {
+        color: var(--bodyTextColorWhite);
+    }
+
+    body.dark-mode #services-367 .cs-item {
+        background-color: var(--dark);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    body.dark-mode #services-367 .cs-item:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 1rem;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    body.dark-mode #services-367 .cs-item:hover .cs-icon-wrapper:before, body.dark-mode #services-367 .cs-item:hover .cs-bubble:before, body.dark-mode #services-367 .cs-item:hover .cs-icon-wrapper:after, body.dark-mode #services-367 .cs-item:hover .cs-bubble:after {
+        background-color: #1a1a1a;
+    }
+
+    body.dark-mode #services-367 .cs-icon-wrapper:before, body.dark-mode #services-367 .cs-bubble:before, body.dark-mode #services-367 .cs-icon-wrapper:after, body.dark-mode #services-367 .cs-bubble:after {
+        background-color: #1a1a1a;
+    }
+
+    body.dark-mode #services-367 .cs-default {
+        display: none;
+    }
+
+    body.dark-mode #services-367 .cs-hover {
+        display: block;
+    }
+}

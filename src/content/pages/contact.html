@@ -1,11 +1,11 @@
 ---
-title: 'Contact | Code Stitch Web Designs'
-description: 'Meta description for the page'
+title: 'Contact | Beauty Royal House'
+description: "Book your beauty treatment at Beauty Royal House in Ross-on-Wye. Professional home salon with free parking and easy access. Get in touch today."
 permalink: 'contact/'
 eleventyNavigation:
     key: Contact Us
     order: 600
-    hideOnDesktop: true
+    
 ---
 
 {% extends "layouts/base.html" %}
@@ -27,7 +27,7 @@ eleventyNavigation:
             <span class="cs-topper">Contact Us</span>
             <h2 class="cs-title">Get in Touch</h2>
             <p class="cs-text">
-                We are a team of passionate and creative individuals dedicated to crafting captivating designs that leave a lasting impression.
+                Beauty Royal House is a professional home salon in Ross-on-Wye. We welcome your enquiries and look forward to helping you book your next appointment.
             </p>
             <ul class="cs-ul">
                 <li class="cs-li">
@@ -47,7 +47,7 @@ eleventyNavigation:
                     </picture>
                     <div class="cs-flex-group">
                         <span class="cs-header">Opening Hours</span>
-                        <a href="{{client.address.mapLink}}" target="_blank" rel="noopener" class="cs-link">{{client.openingHours}}</a>
+                        <a href="{{client.address.mapLink}}" target="_blank" rel="noopener" class="cs-link">Fri-Mon: 9am-6pm<br>Tues-Thurs: Closed</a>
                     </div>
                 </li>
                 <li class="cs-li">
@@ -56,14 +56,14 @@ eleventyNavigation:
                     </picture>
                     <div class="cs-flex-group">
                         <span class="cs-header">Address</span>
-                        <a href="{{client.address.mapLink}}" target="_blank" rel="noopener" class="cs-link">{{client.address.lineOne}}, {{client.address.city}}, {{client.address.zip}}</a>
+                        <a href="{{client.address.mapLink}}" target="_blank" rel="noopener" class="cs-link">{{client.address.lineOne}}, {{client.address.lineTwo}}, {{client.address.lineThree}}<br>{{client.address.city}} {{client.address.zip}}</a>
                     </div>
                 </li>
             </ul>
         </div>
         <!--Form-->
         <form class="cs-form" id="cs-form-1403" name="Contact Form" method="post" data-netlify="true"><input type='hidden' name='form-name' value='Contact Form' />
-            <h3 class="cs-h3">Make Appointment</h3>
+            <h3 class="cs-h3">Make An Appointment</h3>
             <label class="cs-label">
                 Name
                 <input class="cs-input" required type="text" id="name-1403" name="name" placeholder="Name">

@@ -1,7 +1,6 @@
 ---
-title: 'Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/landing.jpg'
+title: 'Beauty Royal House | Beauty Salon | Ross-on-Wye'
+description: "Professional beauty salon in Ross-on-Wye offering expert waxing, skincare and nail treatments in a private home setting. Free parking and ground floor access."
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 eleventyNavigation:
@@ -15,6 +14,7 @@ eleventyNavigation:
     <link rel="stylesheet" href="/assets/css/local.css"/>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
     <link rel="stylesheet" href="/assets/css/components.css"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpg" | resize({width: 2560, height: 1136}) | avif %}">
 
     <!-- Script for Netlify Identity -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -79,73 +79,230 @@ eleventyNavigation:
 <!--                    Hero                      -->
 <!-- ============================================ -->
 
-{% include 'components/hero-856.html' %}
-
-<!-- ============================================ -->
-<!--               Why Choose Us                  -->
-<!-- ============================================ -->
-
-{% include 'components/why-choose-687.html' %}
-
-{% include 'components/why-choose-1313.html' %}
-
-{% include 'components/why-choose-1631.html' %}
-
-{% include 'components/why-choose-1635.html' %}
-
-{% include 'components/why-choose-1658.html' %}
-
-
-<!-- ============================================ -->
-<!--            Featured Service 1                -->
-<!-- ============================================ -->
-
-<section id="sbs-867">
+<section id="hero-1623">
     <div class="cs-container">
-        <picture class="cs-picture">
-            <!--Mobile Image -->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-1.jpg" | resize({width: 576, height: 800}) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-1.jpg" | resize({width: 576, height: 800}) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-1.jpg" | resize({width: 576, height: 800}) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image -->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-1.jpg" | resize({width: 1100, height: 1433}) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-1.jpg" | resize({width: 1100, height: 1433}) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-1.jpg" | resize({width: 1100, height: 1433}) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image -->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-1.jpg" | resize({width: 1260, height: 1550}) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-1.jpg" | resize({width: 1260, height: 1550}) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-1.jpg" | resize({width: 1260, height: 1550}) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/featured-1.jpg" | resize({width: 1260, height: 1550}) | jpeg %}" alt="massage" width="630" height="775" loading="lazy" decoding="async" aria-hidden="true">
-        </picture>
         <div class="cs-content">
-            <span class="cs-topper">Featured Service</span>
-            <h2 class="cs-title">Occupational and Speech Therapy</h2>
+            
+            <h1 class="cs-title">
+                Expert Beauty Treatments in a Walford, Ross-on-Wye</h1>
+            <a href="{{client.onlineBooking}}" target="_blank" rel="noopener" class="cs-button-solid">Book Now!</a>
+            <!--Bottom Corners-->
+            <div class="cs-corners" aria-hidden="true"></div>
+        </div>
+    </div>
+
+    <!-- Background Image -->
+     <picture class="cs-background">
+     <!--Mobile Image -->
+     <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-1.jpg" | resize({width: 720, height: 1652}) | avif %}" type="image/avif">
+     <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-1.jpg" | resize({width: 720, height: 1652}) | webp %}" type="image/webp">
+     <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-1.jpg" | resize({width: 720, height: 1652}) | jpeg %}" type="image/jpeg">
+     <!--Tablet Image -->
+     <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/hero-1.jpg" | resize({width: 2046, height: 1714}) | avif %}" type="image/avif">
+     <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/hero-1.jpg" | resize({width: 2046, height: 1714}) | webp %}" type="image/webp">
+     <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/hero-1.jpg" | resize({width: 2046, height: 1714}) | jpeg %}" type="image/jpeg">
+     <!--Desktop Image -->
+     <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero-1.jpg" | resize({width: 3840, height: 2400}) | avif %}" type="image/avif">
+     <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero-1.jpg" | resize({width: 3840, height: 2400}) | webp %}" type="image/webp">
+     <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero-1.jpg" | resize({width: 3840, height: 2400}) | jpeg %}" type="image/jpeg">
+     <img src="{% getUrl "/assets/images/hero-1.jpg" | resize({width: 3840, height: 2400}) | jpeg %}" alt="lady lip wax" width="1920" height="1200" loading="lazy" decoding="async" aria-hidden="true">
+     </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-367">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a class="cs-link" href="/treatments/">
+                    <div class="cs-icon-wrapper">
+                        <img alt="icon" decoding="async" height="48" src="/assets/svgs/wax.svg" width="48" aria-hidden="true" loading="lazy" class="cs-icon cs-default">
+                        <img alt="icon" decoding="async" height="48" src="/assets/svgs/wax-dark.svg" width="48" aria-hidden="true" loading="lazy" class="cs-icon cs-hover">
+                        <span class="cs-bubble" aria-hidden="true"></span>
+                    </div>
+                    <h3 class="cs-h3">Waxing Treatments</h3>
+                    <p class="cs-item-text">Professional hair removal services using premium wax for silky-smooth results that last up to six weeks.</p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a class="cs-link" href="/treatments/">
+                    <div class="cs-icon-wrapper">
+                        <img alt="icon" decoding="async" height="48" src="/assets/svgs/wax.svg" width="48" aria-hidden="true" loading="lazy" class="cs-icon cs-default">
+                        <img alt="icon" decoding="async" height="48" src="/assets/svgs/wax-dark.svg" width="48" aria-hidden="true" loading="lazy" class="cs-icon cs-hover">
+                        <span class="cs-bubble" aria-hidden="true"></span>
+                    </div>
+                    <h3 class="cs-h3">Gentleman's Waxing</h3>
+                    <p class="cs-item-text">Specialised waxing services designed for men, focusing on back, chest, and facial areas for a groomed appearance.</p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a class="cs-link" href="/treatments/">
+                    <div class="cs-icon-wrapper">
+                        <img alt="icon" decoding="async" height="48" src="/assets/svgs/nail-file.svg" width="48" aria-hidden="true" loading="lazy" class="cs-icon cs-default">
+                        <img alt="icon" decoding="async" height="48" src="/assets/svgs/nail-file-dark.svg" width="48" aria-hidden="true" loading="lazy" class="cs-icon cs-hover">
+                        <span class="cs-bubble" aria-hidden="true"></span>
+                    </div>
+                    <h3 class="cs-h3">Nail Treatments</h3>
+                    <p class="cs-item-text">Transform your hands and feet with expert manicures and pedicures, featuring long-lasting colour and nourishing care.</p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a class="cs-link" href="/treatments/">
+                    <div class="cs-icon-wrapper">
+                        <img alt="icon" decoding="async" height="48" src="/assets/svgs/cosmetics.svg" width="48" aria-hidden="true" loading="lazy" class="cs-icon cs-default">
+                        <img alt="icon" decoding="async" height="48" src="/assets/svgs/cosmetics-dark.svg" width="48" aria-hidden="true" loading="lazy" class="cs-icon cs-hover">
+                        <span class="cs-bubble" aria-hidden="true"></span>
+                    </div>
+                    <h3 class="cs-h3">Skincare Treatments</h3>
+                    <p class="cs-item-text">Revitalise and refresh your complexion with customised facial treatments that target your specific skin concerns.</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-945">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Long Left Image-->
+            <picture class="cs-picture cs-picture1">
+            <!--Mobile Image -->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/nails-1.jpg" | resize({width: 312, height: 528}) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/nails-1.jpg" | resize({width: 312, height: 528}) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/nails-1.jpg" | resize({width: 312, height: 528}) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image -->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/nails-1.jpg" | resize({width: 590, height: 996}) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/nails-1.jpg" | resize({width: 590, height: 996}) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/nails-1.jpg" | resize({width: 590, height: 996}) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image -->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/nails-1.jpg" | resize({width: 698, height: 1180}) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/nails-1.jpg" | resize({width: 698, height: 1180}) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/nails-1.jpg" | resize({width: 698, height: 1180}) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/nails-1.jpg" | resize({width: 698, height: 1180}) | jpeg %}" alt="manicure" width="349" height="590" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <!--Top right image-->
+            <picture class="cs-picture cs-picture2">
+            <!--Mobile Image -->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/manicure-1.jpg" | resize({width: 252, height: 348}) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/manicure-1.jpg" | resize({width: 252, height: 348}) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/manicure-1.jpg" | resize({width: 252, height: 348}) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image -->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/manicure-1.jpg" | resize({width: 476, height: 654}) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/manicure-1.jpg" | resize({width: 476, height: 654}) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/manicure-1.jpg" | resize({width: 476, height: 654}) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image -->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/manicure-1.jpg" | resize({width: 562, height: 774}) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/manicure-1.jpg" | resize({width: 562, height: 774}) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/manicure-1.jpg" | resize({width: 562, height: 774}) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/manicure-1.jpg" | resize({width: 562, height: 774}) | jpeg %}" alt="nails" width="281" height="387" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <!--Bottom right image-->
+            <picture class="cs-picture cs-picture3">
+            <!--Mobile Image -->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/nails-3.jpg" | resize({width: 252, height: 252}) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/nails-3.jpg" | resize({width: 252, height: 252}) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/nails-3.jpg" | resize({width: 252, height: 252}) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image -->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/nails-3.jpg" | resize({width: 474, height: 472}) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/nails-3.jpg" | resize({width: 474, height: 472}) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/nails-3.jpg" | resize({width: 474, height: 472}) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image -->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/nails-3.jpg" | resize({width: 562, height: 560}) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/nails-3.jpg" | resize({width: 562, height: 560}) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/nails-3.jpg" | resize({width: 562, height: 560}) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/nails-3.jpg" | resize({width: 562, height: 560}) | jpeg %}" alt="nails" width="281" height="280" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <!--Seal-->
+            <img class="cs-seal" loading="lazy" decoding="async" src="/assets/svgs/seal.svg" alt="seal" width="150" height="150">
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Who We Are</span>
+            <h2 class="cs-title">A Home Salon for Professional Beauty Care</h2>
             <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dicta officiis praesentium necessitatibus tempora unde quasi porro nemo aliquam voluptatem quaerat hic, doloremque impedit perferendis labore, ea libero voluptas laudantium? 
+                Welcome to Beauty Royal House, a home-based salon in Ross-on-Wye where professional expertise meets personal care. With over a decade of experience in the beauty industry, we've created a peaceful retreat where clients can unwind and feel at ease. 
             </p>
             <p class="cs-text">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                Our salon provides professional beauty treatments in a private, welcoming home environment. From relaxing skincare treatments to expert nail care, we focus on delivering consistent, high-quality services in an accessible space that accommodates all clients, including those with mobility considerations. Our home-based setting offers a more personal alternative to high street salons.
             </p>
-            <a href="" class="cs-button-solid">Learn More</a>
+            <a href="/about/" class="cs-button-solid" aria-label="learn more about us">About Us</a>
         </div>
     </div>
 </section>
 
 <!-- ============================================ -->
-<!--             Popular Services                 -->
+<!--               Why Choose Us                  -->
 <!-- ============================================ -->
 
-{% include 'components/services-343.html' %}
+{% include 'components/why-choose-1635.html' %}
 
-{% include 'components/services-877.html' %}
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
 
-{% include 'components/services-879.html' %}
-
-{% include 'components/services-1251.html' %}
-
-{% include 'components/services-2129.html' %}
-
-
+<section id="sbs-1636">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Featured Service</span>
+                <h2 class="cs-title">Professional Waxing Services</h2>
+            </div>
+            <div class="cs-flex">
+                <p class="cs-text">
+                    Experience professional waxing treatments that leave your skin smooth for up to six weeks. We use premium wax products and maintain the highest hygiene standards for your comfort and safety. Our services cater to both women and gentlemen, with private treatment rooms and experienced care for all your waxing needs.
+                </p>
+                <ul id="list-893" class="cs-ul">
+                    <li class="cs-li">
+                        Full Body Wax
+                    </li>
+                    <li class="cs-li">
+                        Hollywood Wax 
+                    </li>
+                    <li class="cs-li">
+                        Classic Bikini Wax
+                    </li>
+                    <li class="cs-li">
+                        Full Leg Wax
+                    </li>
+                    <li class="cs-li">
+                        Half Leg Wax
+                    </li>
+                    <li class="cs-li">
+                        Full Arm Wax
+                    </li>
+                    <li class="cs-li">
+                        Half Arm Wax
+                    </li>
+                    <li class="cs-li">
+                        Underarm Wax
+                    </li>
+                </ul>               
+                <a href="" class="cs-button-solid">Learn More</a>
+            </div>
+        </div>  
+        <picture class="cs-picture">
+            <!--Mobile Image -->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/waxing.jpg" | resize({width: 576, height: 576}) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/waxing.jpg" | resize({width: 576, height: 576}) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/waxing.jpg" | resize({width: 576, height: 576}) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image -->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/waxing.jpg" | resize({width: 1982, height: 920}) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/waxing.jpg" | resize({width: 1982, height: 920}) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/waxing.jpg" | resize({width: 1982, height: 920}) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image -->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/waxing.jpg" | resize({width: 2560, height: 1240}) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/waxing.jpg" | resize({width: 2560, height: 1240}) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/waxing.jpg" | resize({width: 2560, height: 1240}) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/waxing.jpg" | resize({width: 2560, height: 1240}) | jpeg %}" alt="hot stone massage" width="1280" height="620" loading="lazy" decoding="async">
+        </picture> 
+    </div>
+</section>
 
 <!-- ============================================ -->
 <!--             Featured Service 2               -->
@@ -155,132 +312,36 @@ eleventyNavigation:
     <div class="cs-container">
         <picture class="cs-picture">
             <!--Mobile Image -->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 576, height: 800}) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 576, height: 800}) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 576, height: 800}) | jpeg %}" type="image/jpeg">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/manicure.jpg" | resize({width: 576, height: 800}) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/manicure.jpg" | resize({width: 576, height: 800}) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/manicure.jpg" | resize({width: 576, height: 800}) | jpeg %}" type="image/jpeg">
             <!--Tablet Image -->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 1100, height: 1433}) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 1100, height: 1433}) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 1100, height: 1433}) | jpeg %}" type="image/jpeg">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/manicure.jpg" | resize({width: 1100, height: 1433}) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/manicure.jpg" | resize({width: 1100, height: 1433}) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/manicure.jpg" | resize({width: 1100, height: 1433}) | jpeg %}" type="image/jpeg">
             <!--Desktop Image -->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 1260, height: 1550}) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 1260, height: 1550}) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 1260, height: 1550}) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 1260, height: 1550}) | jpeg %}" alt="massage" width="630" height="775" loading="lazy" decoding="async" aria-hidden="true">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/manicure.jpg" | resize({width: 1260, height: 1550}) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/manicure.jpg" | resize({width: 1260, height: 1550}) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/manicure.jpg" | resize({width: 1260, height: 1550}) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/manicure.jpg" | resize({width: 1260, height: 1550}) | jpeg %}" alt="massage" width="630" height="775" loading="lazy" decoding="async" aria-hidden="true">
         </picture>
         <div class="cs-content">
             <span class="cs-topper">Featured Service</span>
-            <h2 class="cs-title">Occupational and Speech Therapy</h2>
+            <h2 class="cs-title">Professional Nail Care</h2>
             <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dicta officiis praesentium necessitatibus tempora unde quasi porro nemo aliquam voluptatem quaerat hic, doloremque impedit perferendis labore, ea libero voluptas laudantium? 
+                Transform your hands and feet with our range of professional nail treatments. Each service includes careful cuticle care, precise shaping, and expert polish application. Our classic treatments are designed to both beautify and maintain nail health, while our therapeutic options offer extra relief for tired feet.
             </p>
-            <p class="cs-text">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-            </p>
+            <ul id="list-1165" class="cs-ul">
+                <li class="cs-li">Classic Manicure</li>
+                <li class="cs-li">Classic Pedicure</li>
+                <li class="cs-li">Mani-Pedi with Therapeutic Foot Massage</li>
+                <li class="cs-li">Polish Change (Hands)</li>
+                <li class="cs-li">Polish Change (Feet)</li>
+            </ul>                   
             <a href="{{client.onlineBooking}}" class="cs-button-solid">Learn More</a>
         </div>
     </div>
 </section>
 
-<!-- ============================================ -->
-<!--                    FAQ                       -->
-<!-- ============================================ -->
-
-<section id="faq-1108">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">FAQ’s</span>
-            <h2 class="cs-title">Frequently Asked Questions</h2>
-            <picture class="cs-picture">
-                <!--Mobile Image -->
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({width: 716, height: 720}) | avif %}" type="image/avif">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({width: 716, height: 720}) | webp %}" type="image/webp">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({width: 716, height: 720}) | jpeg %}" type="image/jpeg">
-                <!--Tablet Image -->
-                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({width: 1044, height: 800}) | avif %}" type="image/avif">
-                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({width: 1044, height: 800}) | webp %}" type="image/webp">
-                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({width: 1044, height: 800}) | jpeg %}" type="image/jpeg">
-                <!--Desktop Image -->
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({width: 1044, height: 800}) | avif %}" type="image/avif">
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({width: 1044, height: 800}) | webp %}" type="image/webp">
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({width: 1044, height: 800}) | jpeg %}" type="image/jpeg">
-                <img src="{% getUrl "/assets/images/faq.jpg" | resize({width: 1044, height: 800}) | jpeg %}" alt="massage products" width="1044" loading="lazy" decoding="async" aria-hidden="true">
-                </picture>
-        </div>
-        <div class="cs-flex-group">
-            <ul class="cs-faq-group">
-                <!-- Active class added as default -->
-                <li class="cs-faq-item active">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            Do you have experience with car like mine?
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        In the U.S., the terms lawyer and attorney are often used interchangeably. A lawyer provides legal services such as giving legal advice, writing legal documents and providing policy counsel to governments. An attorney, on top of these things also holds a state or regional license to represent clients in a law court.
-                    </p>
-                </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            What is your plan cancellation policy?
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
-                    </p>
-                </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            What professional certifications you have?
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
-                    </p>
-                </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            What professional certifications you have?
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
-                    </p>
-                </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            How much air pressure should I put my tires?
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
-                    </p>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================ -->
-<!--                   Reviews                    -->
-<!-- ============================================ -->
-                                
-{% include 'components/reviews-1673.html' %}                             
-                                
-                                
-                                
-                                
-<script>const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
-    for (const item of faqItems) {
-        const onClick = () => {
-        item.classList.toggle('active')
-    }
-    item.addEventListener('click', onClick)
-    }
-</script>
 
 {% endblock %}
